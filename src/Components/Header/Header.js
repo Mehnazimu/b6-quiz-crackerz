@@ -4,12 +4,18 @@ import './Header.css';
 
 const Header = () => {
     return (
-        
-        <nav className='header'>
-            <Link to='/'>Home</Link>
-            <Link to='/statistics'>Statistics</Link>
-            <Link to='/blog'>Blog</Link>
-            
+
+        <nav className='nav'>
+            <div>
+                <h1 className='headline'>Quiz-track</h1>
+            </div>
+
+            <div className='header'>
+                <Link to='/'>Home</Link>
+                <Link to='/statistics'>Statistics</Link>
+                <Link to='/blog'>Blog</Link>
+            </div>
+
 
         </nav>
     );
