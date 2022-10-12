@@ -1,13 +1,11 @@
-.options{
-    
-    align-items: center;
-    
+.options {
+    display: flex;
+    border: 1px solid grey;
+    margin: 5px;
+    margin-bottom: 5px;
 }
-.list{
-    list-style-type: none;
-    padding: 2px;
-    margin: 4px;
-}
-li{
-    border: 2 px solid brown;
+
+.options:hover {
+    background-color: rgb(34, 196, 218);
+    color: black;
 }
