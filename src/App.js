@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './Components/Blog/Blog';
+import Error from './Components/Error';
 import Home from './Components/Home/Home';
 import Quiz from './Components/Quiz/Quiz';
 import Statistics from './Components/Statistics/Statistics';
@@ -23,6 +24,7 @@ function App() {
         },
         {
           path: '/statistics',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Statistics></Statistics>
         },
         {
@@ -37,11 +39,14 @@ function App() {
           element: <Quiz></Quiz>
         }
 
+
       ]
     },
     {
-      path: '*', element: <div>This page is not Available, Please enter a valid address!!!!!!!!</div>
+      path: '*', element: <Error></Error>
     }
+
+
   ])
   return (
     <div className="App">
