@@ -1,6 +1,13 @@
 .options{
-    display: flex;
-    flex-direction: column;
+    
     align-items: center;
     
+}
+.list{
+    list-style-type: none;
+    padding: 2px;
+    margin: 4px;
+}
+li{
+    border: 2 px solid brown;
 }

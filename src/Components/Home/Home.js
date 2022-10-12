@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Topic from '../Topic/Topic';
 import home from './Home.css';
 
 const Home = () => {
     const topics = useLoaderData([]);
+   
     return (
         <div className='home'>
 
@@ -12,6 +13,7 @@ const Home = () => {
                 topics.data.map(topic => <Topic
                     key={topic.id}
                     topic={topic}
+                    
                 ></Topic>)
             }
         </div>

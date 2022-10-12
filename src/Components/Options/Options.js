@@ -1,16 +1,19 @@
 import React from 'react';
+
 import './Options.css';
 
-const Options = ({option}) => {
+const Options = ({option, correctAnswer,selectAnswer}) => {
 
-
+   
     return (
         <div className='options'>
-        <div>
-            <input type="radio" name="question" id={option} value={option} />
+       
+            <li className='list'>
+            <input type="radio" name="question" id={option} value={option} onChange={selectAnswer}  />
             <label For={option}>{option}</label>
+            </li>
             
-         </div>
+        
         </div>
     );
 };
